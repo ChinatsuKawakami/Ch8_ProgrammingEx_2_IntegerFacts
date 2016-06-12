@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 /*
  * This is IntegerFacts of the programming exercise in ch8
  * Date:12th June 2016
- * Version 0.0.1 Initial commit
+ * Version 0.0.2 Added another answer 
  * 
  */
 namespace IntegerFacts3
@@ -59,6 +59,7 @@ namespace IntegerFacts3
             number = i;
         }
 
+        
         private static void SecondMethod(int [] array, int number, out int highest,out int lowest,out double sum, out double average)
         {
             highest = array[0];
@@ -88,3 +89,74 @@ namespace IntegerFacts3
         }
     }
 }
+/*
+*
+*    static void Main(string[] args)
+        {
+            int first, second ,sum,number;
+            double average;
+
+            int[] array = new int[20];
+            FillArrayMethod(array,out number);
+            SecondMethod( array ,number,out first, out second ,out sum, out average);
+            
+            Console.Write("The lowest Numebr is:{0}", second);
+            Console.Write("The highest Number is:{0}", first);
+            Console.WriteLine("The sum is {0}",sum);
+            Console.WriteLine("The Average is {0}",average);
+        }//close Main()
+      private static void FillArrayMethod(int[] array,out int number)
+    {
+        
+        int i=0;
+
+            //try
+            //{
+          do{
+            int input;
+                Console.Write("Enter Integer:");
+              
+               if( int.TryParse(Console.ReadLine(),out input))
+               {
+                 
+                if (input == -1)
+                {
+                    break;
+                }
+                else
+                {
+                    array[i] = input;
+                }
+                   i++;
+               }else{
+                   Console.WriteLine("Enter Valid Integer");
+               }
+          }while(i<20);
+          number= i;
+          }
+
+
+        static void SecondMethod(int []array,int number,out int highest,out int lowest,out int sum, out double average)
+        {
+     
+        
+        sum = 0;
+        highest = array[0];
+        lowest = array[0];
+
+        for(int i = 0; i<number;i++){
+            if (array[i] > highest)
+                highest = array[i];
+            if (array[i] < lowest)
+                lowest = array[i];
+            sum += array[i];
+        }
+        average = (double)(sum / number);
+    }
+
+        
+    }
+}
+*
+*
+*/
