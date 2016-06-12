@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 /*
  * This is IntegerFacts of the programming exercise in ch8
  * Date:12th June 2016
- * Version 0.0.2 Added another answer 
+ * Version 0.0.3 Added {} inside SecondMethod 
  * 
  */
 namespace IntegerFacts3
@@ -70,14 +70,14 @@ namespace IntegerFacts3
             {
 
                 if (highest < array[count])
-                
+                {
                     highest = array[count];
+                }
 
-               
                 if (lowest > array[count])
-
+                {
                     lowest = array[count];
-
+                }
 
 
                 sum += (double)array[count];
